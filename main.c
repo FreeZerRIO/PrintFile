@@ -1,11 +1,3 @@
-//
-//  main.c
-//  Print File
-//
-//  Created by Алексей Баринов on 30.11.2017.
-//  Copyright © 2017 Era Company. All rights reserved.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -18,7 +10,7 @@ int main(int argc, char ** argv)
     if (f == NULL)
     {
         while (f == NULL) {
-            printf("Неверный путь к файлу\n");
+            printf("Invalid file path\n");
             exit(1);
         }
     }
@@ -32,6 +24,6 @@ int main(int argc, char ** argv)
     while ((fgetc(f)) != EOF)
         sizze++;
     fclose(f);
-    printf("Написано %d записей, всего %d байт\n", pos, sizze);
+    printf("Written %d records %d bytes\n", pos, sizze);
     return 0;
 }
